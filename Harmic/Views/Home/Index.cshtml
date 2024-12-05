@@ -3,6 +3,7 @@
     List<TbProduct> productNew = ViewBag.productNew;
 }
 
+
   <!-- Begin Slider Area -->
 <div class="slider-area">
 
@@ -155,12 +156,12 @@
                             All Items
                         </a>
                     </li>
-                    @foreach(var item in productCategories.Where(i => (bool)i.IsActive))
+                    @foreach (var item in productCategories.Where(i => (bool)i.IsActive))
                     {
                         <li class="nav-item" role="presentation">
                             <a id="@item.Alias-tab" data-bs-toggle="tab" href="#@item.Alias" role="tab">
                                 <div class="product-tab-icon">
-                                    <img src="@item.Icon" alt="Product Icon"/>
+                                    <img src="@item.Icon" alt="Product Icon" />
                                 </div>
                                 @item.Title
                             </a>
